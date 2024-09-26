@@ -5,6 +5,8 @@ from dotenv import load_dotenv
 # Carrega variáveis de ambiente do .env
 load_dotenv()
 
+print(os.getenv('DATABASE_URL'))
+
 # Cria a instância do app
 app = create_app()
 
