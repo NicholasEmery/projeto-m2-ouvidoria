@@ -1,7 +1,7 @@
 import os
 from app import create_app
 from dotenv import load_dotenv
-
+from flask_cors import CORS
 # Carrega variáveis de ambiente do .env
 load_dotenv()
 
@@ -9,6 +9,8 @@ print(os.getenv('DATABASE_URL'))
 
 # Cria a instância do app
 app = create_app()
+CORS(app)
+
 
 # Verifica se estamos rodando o arquivo principal
 if __name__ == "__main__":
