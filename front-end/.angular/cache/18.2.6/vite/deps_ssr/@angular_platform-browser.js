@@ -28,7 +28,6 @@ import {
   createApplication,
   disableDebugTools,
   enableDebugTools,
-  getDOM,
   initDomAdapter,
   platformBrowser,
   provideClientHydration,
@@ -37,8 +36,11 @@ import {
   withHttpTransferCacheOptions,
   withI18nSupport,
   withNoHttpTransferCache
-} from "./chunk-WBKQ6LYD.js";
-import "./chunk-AUQBY5A7.js";
+} from "./chunk-HAAEGMP3.js";
+import {
+  getDOM
+} from "./chunk-BQJNFWFH.js";
+import "./chunk-MVH4IRTM.js";
 import "./chunk-NQ4HTGF6.js";
 export {
   BrowserModule,
