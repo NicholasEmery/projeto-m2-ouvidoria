@@ -1,10 +1,19 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { DataService } from './data.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  title = 'front-end';
+export class AppComponent implements OnInit {
+  data: any;
+
+  constructor(private dataService: DataService) { }
+
+  ngOnInit(): void {
+    this.dataService.getData().subscribe(response => {
+      this.data = response;
+    });
+  }
 }
