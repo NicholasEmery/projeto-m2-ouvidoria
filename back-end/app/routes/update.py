@@ -2,7 +2,7 @@ from flask import request, jsonify, current_app
 from app import db
 from app.models import Manifestacao, Usuario
 
-@current_app.route('/manifestacao/<int:id>', methods=['PUT'])
+@current_app.route('/api/manifestacao/<int:id>', methods=['PUT'])
 def atualizar_manifestacao(id):
     manifestacao = Manifestacao.query.get_or_404(id)
     dados = request.get_json()
@@ -14,7 +14,7 @@ def atualizar_manifestacao(id):
     return jsonify({"mensagem": "Manifestação atualizada com sucesso"})
 
 
-@current_app.route('/usuario/<int:id>', methods=['PUT'])
+@current_app.route('/api/usuario/<int:id>', methods=['PUT'])
 def atualizar_usuario(id):
     usuario = Usuario.query.get_or_404(id)
     dados = request.get_json()
@@ -26,7 +26,7 @@ def atualizar_usuario(id):
     return jsonify({"server": "Usuario atualizado com sucesso"})
 
 
-@current_app.route('/manifestacao/<int:id>', methods=['DELETE'])
+@current_app.route('/api/manifestacao/<int:id>', methods=['DELETE'])
 def excluir_manifestacao(id):
     manifestacao = Manifestacao.query.get_or_404(id)
     db.session.delete(manifestacao)
@@ -34,7 +34,7 @@ def excluir_manifestacao(id):
 
     return jsonify({"mensagem": "Manifestação excluída com sucesso"})
 
-@current_app.route('/usuario/<int:id>', methods=['DELETE'])
+@current_app.route('/api/usuario/<int:id>', methods=['DELETE'])
 def excluir_usuario(id):
     usuario = Usuario.query.get_or_404(id)
     db.session.delete(usuario)

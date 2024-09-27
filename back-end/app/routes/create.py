@@ -2,7 +2,7 @@ from flask import request, jsonify, current_app
 from app import db
 from app.models import Manifestacao, Usuario
 
-@current_app.route('/manifestacao', methods=['POST'])
+@current_app.route('/api/manifestacao', methods=['POST'])
 def criar_manifestacao():
     dados = request.get_json()
     tipo = dados.get('tipo')
@@ -17,7 +17,7 @@ def criar_manifestacao():
 
     return jsonify({"mensagem": "Manifestação criada com sucesso", "id": manifestacao.id}), 201
 
-@current_app.route('/usuario', methods=['POST'])
+@current_app.route('/api/usuario', methods=['POST'])
 def criar_usuario():
     dados = request.get_json()
     user = dados.get('nome')

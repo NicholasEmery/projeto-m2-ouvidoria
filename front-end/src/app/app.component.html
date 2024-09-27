@@ -1,118 +1,36 @@
-<header>
-  <div class="logo">
-      <img src="Logo.png" alt="Logo Unifacisa" width="140px" style="margin-left: 50px;">
-  </div>
-  <nav>
-          <span><a href="#nossos-colaboradores">Nossos Colaboradores<img src="Vector.png" alt="vector"></a></span>
-          <span><a href="#sobre-nos">Sobre Nos<img src="Vector.png" alt="vector"></a></span>
-          <span><button class="button_login" type="button">Login</button></span>
-          <span><button class="button_bg" type="button">Compartilhe sua experiencia<img src="vectorlateral.png" alt="vector"></button></span>
-  </nav>
-</header>
+<div class="container">
+    <!-- Botão para criar nova manifestação -->
+    <button (click)="openCreateModal()">Criar Manifestação</button>
 
-<main>
-  <section class="parte_01">
-    <div id="texto_01">
-      <h2>A Voz que Transforma: 
-        <br>Bem-vindo à Ouvidoria!</h2>
-      <p>Com sua opinião nós podemos fazer da nossa faculdade, cada vez melhor. 
-        <br>Seu feedback é essencial!</p>
-        <button class="button_bg" type="button">Cadastre-se já<img src="vectorlateral.png" alt="vector"></button>
-      </div>
-      <img id="img_home" src="image01.png" alt="imagem inicio">
-      </section>
-  <section class="parte_02">
-      <div id="texto_02">
-          <h2>Compartilhe sua experiencia
-              <br>Sua voz importa !</h2>
-          <p>Sua participação ativa não só enriquece nossa instituição, mas também ajuda a criar um ambiente mais acolhedor e inovador para todos. 
-              Acredite na força do diálogo e na importância de ser ouvido.</p>
-          <button class="button_bg" type="button">Cadastre-se já<img src="vectorlateral.png" alt="vector"></button>
-      </div>
-  </section>
-  <section class="parte_03">
-    <div id="texto_03">
-      <h2> Sua opinião movendo  montanhas</h2>
-      <p>Estamos aqui para ouvir você, apoiar suas iniciativas e trabalhar juntos em prol de um futuro ainda melhor. Juntos, podemos fazer a diferença. 
-        Compartilhe sua voz e veja como ela pode impactar positivamente nossa comunidade!</p></div>
-      
-  </section>
-  <section class="parte_04">
-        <h2>Veja o que os alunos estão comentando:</h2>
-        <table class="tabela-moderna">
-          <thead>
-              <tr>
-                  <th>Nome</th>
-                  <th>Curso</th>
-                  <th>Tipo</th>
-                  <th>Texto</th>
-                  <th> </th>
-              </tr>
-          </thead>
-          <tbody>
-              <tr>
-                  <td>João</td>
-                  <td>Medicina</td>
-                  <td>Critica</td>
-                  <td>Segurança Péssima</td>
-                  <td><button class="table_bt" type="button"><img src="trash.png" alt=""> </button>
-                      <button class="table_bt" type="button"><img src="edit.png" alt=""></button></td>
-              </tr>
-              <tr>
-                  <td>Maria</td>
-                  <td>ADS</td>
-                  <td>Sugestão</td>
-                  <td>Melhorar plataforma Canvas</td>
-                  <td><button class="table_bt" type="button"><img src="trash.png" alt=""> </button>
-                      <button class="table_bt" type="button"><img src="edit.png" alt=""></button></td>
-              </tr>
-              <tr>
-                  <td>Pedro</td>
-                  <td>SI</td>
-                  <td>Critica</td>
-                  <td>Professores mal educados</td>
-                  <td><button class="table_bt" type="button"><img src="trash.png" alt=""> </button>
-                      <button class="table_bt" type="button"><img src="edit.png" alt=""></button></td>
-              </tr>
-          </tbody>
-      </table>
-  </section>
-</main>
+    <!-- Tabela para listar manifestações -->
+    <table>
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let manifestation of manifestations">
+                <td>{{ manifestation.name }}</td>
+                <td>
+                    <button (click)="openEditModal(manifestation)">Editar</button>
+                    <button (click)="deleteManifestation(manifestation.id)">Deletar</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
 
+<!-- Modal para criar/editar manifestação -->
+<div class="modal" *ngIf="selectedManifestation !== null">
+    <h2>{{ selectedManifestation?.id ? 'Editar' : 'Criar' }} Manifestação</h2>
 
-<footer>
-  <div class="footer-content">
-      <div class="footer-section">
-          <p>Resources</p>
-          <ul>
-              <li><a href="#">Overview</a></li>
-              <li><a href="#">Pricing</a></li>
-              <li><a href="#">Customer stories</a></li>
-          </ul>
-      </div>
-      <div class="footer-section">
-          <p>Resources</p>
-          <ul>
-              <li><a href="#">Blog</a></li>
-              <li><a href="#">Guides & tutorials</a></li>
-              <li><a href="#">Help Center</a></li>
-          </ul>
-      </div>
-      <div class="footer-section">
-          <p>Company</p>
-          <ul>
-              <li><a href="#">About Us</a></li>
-              <li><a href="#">Careers</a></li>
-              <li><a href="#">Midia Kit</a></li>
-          </ul>
-      </div>
-  </div>
-  <div class="footer-bottom">
-      <a href="#">Terms & privacy</a>
-      <a href="#">Security</a>
-      <a href="#">Status</a>
-      <a>&copy;2024 | UniFacisa. Todos os direitos reservados.</a>
-  </div>
-</footer>
+    <form (ngSubmit)="saveManifestation(manifestationForm.value)" #manifestationForm="ngForm">
+        <label for="name">Nome:</label>
+        <input type="text" id="name" name="name" [(ngModel)]="selectedManifestation.name" required>
 
-<router-outlet />
+        <button type="submit">{{ selectedManifestation?.id ? 'Salvar' : 'Criar' }}</button>
+        <button type="button" (click)="selectedManifestation = null">Cancelar</button>
+    </form>
+</div>
