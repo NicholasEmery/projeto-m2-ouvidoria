@@ -1,10 +1,6 @@
 *{
     color: #212529;
 }
-#td-btn button img {   
-    width: 15px;
-
-}
 #bt-afastar button{
     margin-top: 10px;
     margin-left: 10px;
@@ -32,13 +28,18 @@ button {
     margin-bottom: 20px;
     margin-top: -20px;
 }
+#delete-bt{
+    background: none;
+    margin-left: 10px;
+}
 #delete-bt img{
     width: 15px;
-
 }
 #update-bt img{
-    width: 15px;
-
+    width: 14px;
+}
+#update-bt{
+    background: none;
 }
 #centralizar{
     text-align: center;

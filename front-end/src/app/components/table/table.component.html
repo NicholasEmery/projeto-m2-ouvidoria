@@ -18,8 +18,8 @@
                 <td>{{ manifestation.tipo }}</td>
                 <td>{{ manifestation.descricao }}</td>
                 <td id="td-btn">
-                    <button id="update-bt" class="btn btn-warning" (click)="openEditModal(manifestation)"><img class="imagem" src="edit.png" alt=""></button>
-                    <button id="delete-bt" class="btn btn-danger" (click)="deleteManifestation(manifestation.id)"><img src="trash.png" alt=""></button>
+                    <button id="update-bt" class="btn" (click)="openEditModal(manifestation)"><img class="imagem" src="edit.png" alt=""></button>
+                    <button id="delete-bt" class="btn" (click)="deleteManifestation(manifestation.id)"><img src="trash.png" alt=""></button>
                 </td>
             </tr>
         </tbody>
@@ -59,4 +59,4 @@
             </div>
         </div>
     </div>
-</div>  
+</div> 
