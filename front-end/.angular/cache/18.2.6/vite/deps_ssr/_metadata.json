@@ -1,8 +1,15 @@
 {
+<<<<<<< Updated upstream
   "hash": "32ba1b68",
   "configHash": "6d64e198",
   "lockfileHash": "2a89be95",
   "browserHash": "7a7ab6b5",
+=======
+  "hash": "7beb6eb5",
+  "configHash": "fd19e8f5",
+  "lockfileHash": "c647d438",
+  "browserHash": "1cf13c47",
+>>>>>>> Stashed changes
   "optimized": {
     "@angular/common": {
       "src": "../../../../../node_modules/@angular/common/fesm2022/common.mjs",
@@ -13,12 +20,17 @@
     "@angular/common/http": {
       "src": "../../../../../node_modules/@angular/common/fesm2022/http.mjs",
       "file": "@angular_common_http.js",
+<<<<<<< Updated upstream
       "fileHash": "96186db0",
+=======
+      "fileHash": "7b456390",
+>>>>>>> Stashed changes
       "needsInterop": false
     },
     "@angular/core": {
       "src": "../../../../../node_modules/@angular/core/fesm2022/core.mjs",
       "file": "@angular_core.js",
+<<<<<<< Updated upstream
       "fileHash": "4b1e20fe",
       "needsInterop": false
     },
@@ -26,28 +38,44 @@
       "src": "../../../../../node_modules/@angular/forms/fesm2022/forms.mjs",
       "file": "@angular_forms.js",
       "fileHash": "8727902a",
+=======
+      "fileHash": "7d067271",
+>>>>>>> Stashed changes
       "needsInterop": false
     },
     "@angular/platform-browser": {
       "src": "../../../../../node_modules/@angular/platform-browser/fesm2022/platform-browser.mjs",
       "file": "@angular_platform-browser.js",
+<<<<<<< Updated upstream
       "fileHash": "ca4d10b1",
+=======
+      "fileHash": "5c4a258d",
+>>>>>>> Stashed changes
       "needsInterop": false
     },
     "@angular/platform-server": {
       "src": "../../../../../node_modules/@angular/platform-server/fesm2022/platform-server.mjs",
       "file": "@angular_platform-server.js",
+<<<<<<< Updated upstream
       "fileHash": "b5fd5251",
+=======
+      "fileHash": "602fb9ce",
+>>>>>>> Stashed changes
       "needsInterop": false
     },
     "@angular/router": {
       "src": "../../../../../node_modules/@angular/router/fesm2022/router.mjs",
       "file": "@angular_router.js",
+<<<<<<< Updated upstream
       "fileHash": "d07badb6",
+=======
+      "fileHash": "0560da45",
+>>>>>>> Stashed changes
       "needsInterop": false
     }
   },
   "chunks": {
+<<<<<<< Updated upstream
     "chunk-OAWEFC5Y": {
       "file": "chunk-OAWEFC5Y.js"
     },
@@ -56,9 +84,16 @@
     },
     "chunk-64RZX3U4": {
       "file": "chunk-64RZX3U4.js"
+=======
+    "chunk-6SPDVQLE": {
+      "file": "chunk-6SPDVQLE.js"
     },
-    "chunk-MVH4IRTM": {
-      "file": "chunk-MVH4IRTM.js"
+    "chunk-BA5GTRD2": {
+      "file": "chunk-BA5GTRD2.js"
+>>>>>>> Stashed changes
+    },
+    "chunk-AUQBY5A7": {
+      "file": "chunk-AUQBY5A7.js"
     },
     "xhr2-JDAPKF6S": {
       "file": "xhr2-JDAPKF6S.js"

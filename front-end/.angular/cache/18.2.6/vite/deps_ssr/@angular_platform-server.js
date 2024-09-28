@@ -5,11 +5,15 @@ import {
   DomRendererFactory2,
   EVENT_MANAGER_PLUGINS,
   EventManagerPlugin
+<<<<<<< Updated upstream
 } from "./chunk-OAWEFC5Y.js";
 import {
   HTTP_ROOT_INTERCEPTOR_FNS,
   HttpClientModule
 } from "./chunk-OIOAX3RD.js";
+=======
+} from "./chunk-6SPDVQLE.js";
+>>>>>>> Stashed changes
 import {
   DOCUMENT,
   NullViewportScroller,
@@ -19,7 +23,11 @@ import {
   XhrFactory,
   getDOM,
   setRootDomAdapter
+<<<<<<< Updated upstream
 } from "./chunk-64RZX3U4.js";
+=======
+} from "./chunk-BA5GTRD2.js";
+>>>>>>> Stashed changes
 import {
   ALLOW_MULTIPLE_PLATFORMS,
   ANIMATION_MODULE_TYPE,
@@ -58,7 +66,7 @@ import {
   ɵɵdefineInjector,
   ɵɵdefineNgModule,
   ɵɵinject
-} from "./chunk-MVH4IRTM.js";
+} from "./chunk-AUQBY5A7.js";
 import {
   __async,
   __objRest,
