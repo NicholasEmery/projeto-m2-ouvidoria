@@ -1,21 +1,25 @@
 <div class="container">
     <!-- Botão para criar nova manifestação -->
-    <button (click)="openCreateModal()">Criar Manifestação</button>
+    <button class="btn btn-primary" (click)="openCreateModal()">Criar Manifestação</button>
 
     <!-- Tabela para listar manifestações -->
-    <table>
+    <table class="table">
         <thead>
             <tr>
-                <th>Nome</th>
+                <th>Nome do Usuário</th>
+                <th>Tipo de Manifestação</th>
+                <th>Descrição</th>
                 <th>Ações</th>
             </tr>
         </thead>
         <tbody>
             <tr *ngFor="let manifestation of manifestations">
-                <td>{{ manifestation.name }}</td>
+                <td>{{ manifestation.usuario }}</td>
+                <td>{{ manifestation.tipo }}</td>
+                <td>{{ manifestation.descricao }}</td>
                 <td>
-                    <button (click)="openEditModal(manifestation)">Editar</button>
-                    <button (click)="deleteManifestation(manifestation.id)">Deletar</button>
+                    <button class="btn btn-warning" (click)="openEditModal(manifestation)">Editar</button>
+                    <button class="btn btn-danger" (click)="deleteManifestation(manifestation.id)">Deletar</button>
                 </td>
             </tr>
         </tbody>
@@ -23,14 +27,39 @@
 </div>
 
 <!-- Modal para criar/editar manifestação -->
-<div class="modal" *ngIf="selectedManifestation !== null">
-    <h2>{{ selectedManifestation?.id ? 'Editar' : 'Criar' }} Manifestação</h2>
-
-    <form (ngSubmit)="saveManifestation(manifestationForm.value)" #manifestationForm="ngForm">
-        <label for="name">Nome:</label>
-        <input type="text" id="name" name="name" [(ngModel)]="selectedManifestation.name" required>
-
-        <button type="submit">{{ selectedManifestation?.id ? 'Salvar' : 'Criar' }}</button>
-        <button type="button" (click)="selectedManifestation = null">Cancelar</button>
-    </form>
+<div class="modal" tabindex="-1" [ngClass]="{'show': selectedManifestation !== null}" style="display: block;"
+    *ngIf="selectedManifestation !== null">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">{{ selectedManifestation?.id ? 'Editar Manifestação' : 'Criar Manifestação' }}
+                </h5>
+                <button type="button" class="close" aria-label="Close" (click)="closeModal()">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form #manifestationForm="ngForm" (ngSubmit)="saveManifestation(manifestationForm.value)">
+                    <div class="form-group">
+                        <label for="usuario">Nome do Usuário:</label>
+                        <input type="text" id="usuario" class="form-control" name="usuario"
+                            [(ngModel)]="selectedManifestation.usuario" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="tipo">Tipo de Manifestação:</label>
+                        <input type="text" id="tipo" class="form-control" name="tipo"
+                            [(ngModel)]="selectedManifestation.tipo" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="descricao">Descrição:</label>
+                        <textarea id="descricao" class="form-control" name="descricao"
+                            [(ngModel)]="selectedManifestation.descricao" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">{{ selectedManifestation?.id ? 'Salvar' : 'Criar'
+                        }}</button>
+                    <button type="button" class="btn btn-secondary" (click)="closeModal()">Cancelar</button>
+                </form>
+            </div>
+        </div>
+    </div>
 </div>

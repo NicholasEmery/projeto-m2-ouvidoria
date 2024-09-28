@@ -25,19 +25,22 @@ export class AppComponent implements OnInit {
   }
 
   // Abre o modal de criação
-  openCreateModal(): void {  
-    this.selectedManifestation = null;  // Limpa a seleção
-    // Abrir modal de criação (implementar no HTML)
+  openCreateModal(): void {
+    this.selectedManifestation = { usuario: '', tipo: '', descricao: '' };  // Limpa a seleção para criar uma nova
   }
 
   // Abre o modal de edição
   openEditModal(manifestation: any): void {
     this.selectedManifestation = { ...manifestation };  // Clona os dados para editar
-    // Abrir modal de edição (implementar no HTML)
+  }
+
+  // Fecha o modal
+  closeModal(): void {
+    this.selectedManifestation = null;  // Fecha o modal limpando a seleção
   }
 
   // Deleta uma manifestação
-  deleteManifestation(id: number): void { 
+  deleteManifestation(id: number): void {
     if (confirm('Tem certeza que deseja deletar?')) {
       this.dataService.deleteManifestation(id).subscribe(() => {
         this.loadManifestations();  // Atualiza a tabela
@@ -58,6 +61,6 @@ export class AppComponent implements OnInit {
         this.loadManifestations();  // Atualiza a tabela
       });
     }
-    // Fechar o modal (implementar no HTML)
+    this.closeModal();  // Fechar o modal após salvar
   }
 }
