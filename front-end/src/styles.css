@@ -1,5 +1,19 @@
-/* You can add global styles to this file, and also import other style files */
-* {
-    margin: 0;
+/*  Importando como Classe a fonte "Inter"  */   
+.inter-inter {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 0;
+    font-style: normal;
+  }
+
+
+/*  Inicio do CSS GLOBAL  */   
+
+
+*{
+    color: #ffffff;
+    font-family: Inter, sans-serif;
+    font-size: 12px;
     padding: 0;
+    margin: 0;
 }

@@ -1,4 +1,63 @@
+*{
+    color: #212529;
+}
 #td-btn button img {   
     width: 15px;
 
+}
+#bt-afastar button{
+    margin-top: 10px;
+    margin-left: 10px;
+}
+label{
+    margin: 10px 0px;
+}
+button {
+    background-color: #4F9CF9;
+    color: white;             
+    border: none;       
+    border-radius: 5px;
+    padding: 8px 10px;
+    cursor: pointer;          
+    transition: background-color 0.3s, transform 0.2s;
+}
+    button:hover {
+        background-color: #0056b3; 
+        transform: scale(1.05);   
+    }
+    button:active {
+        transform: scale(0.95);     
+    }
+#bt-criar-inicial {
+    margin-bottom: 20px;
+    margin-top: -20px;
+}
+#delete-bt img{
+    width: 15px;
+
+}
+#update-bt img{
+    width: 15px;
+
+}
+#centralizar{
+    text-align: center;
+    justify-content: center;
+}
+#bt-cancel {
+    background-color: #212529b7;
+}
+#bt-cancel:hover {
+    background-color: #9b0b0b; 
+    transform: scale(1.05);   
+}
+#bt-cancel:active {
+    transform: scale(0.95);     
+}
+#bt-submit:hover {
+    background-color: #1c9b0b; 
+    transform: scale(1.05);   
+}
+#bt-submit:active {
+    transform: scale(0.95);     
 }
