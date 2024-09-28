@@ -17,8 +17,8 @@
                 <td>{{ manifestation.usuario }}</td>
                 <td>{{ manifestation.tipo }}</td>
                 <td>{{ manifestation.descricao }}</td>
-                <td>
-                    <button class="btn btn-warning" (click)="openEditModal(manifestation)"><img src="edit.png" alt=""></button>
+                <td id="td-btn">
+                    <button class="btn btn-warning" (click)="openEditModal(manifestation)"><img class="imagem" src="edit.png" alt=""></button>
                     <button class="btn btn-danger" (click)="deleteManifestation(manifestation.id)"><img src="trash.png" alt=""></button>
                 </td>
             </tr>
