@@ -1,5 +1,14 @@
-back-end/app/__pycache__
-back-end/app/routes/__pycache__
-front-end/.angular
-front-end/node_modules
-front-end/.vscode
+# Ignorar diretórios de cache do Python
+__pycache__/
+back-end/app/__pycache__/
+back-end/app/routes/__pycache__/
+
+# Ignorar diretórios e arquivos do Angular
+front-end/.angular/
+front-end/node_modules/
+front-end/.vscode/
+
+# Ignorar outros arquivos temporários e de log
+*.log
+*.tmp
+*.swp
