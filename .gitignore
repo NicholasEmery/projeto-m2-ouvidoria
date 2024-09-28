@@ -2,7 +2,7 @@
 __pycache__/
 back-end/app/__pycache__/
 back-end/app/routes/__pycache__/
-back-end\.env
+back-end/.env
 # Ignorar diretórios e arquivos do Angular
 front-end/.angular/cache/
 front-end/node_modules/
