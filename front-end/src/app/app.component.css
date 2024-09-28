@@ -1,29 +1,238 @@
-.modal {
-    display: block;
-    position: fixed;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+/*  Importando como Classe a fonte "Inter"  */   
+.inter-inter {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 0;
+    font-style: normal;
+  }
+
+
+/*  Inicio do CSS GLOBAL  */   
+
+
+*{
+    color: #ffffff;
+    font-family: Inter, sans-serif;
+    font-size: 12px;
+    padding: 0;
+    margin: 0;
+}
+
+
+/*  Inicio do CSS do Header  */   
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 20px;
-    background-color: white;
-    border: 1px solid black;
+    background-color: #043873;
+}
+    nav span {
+        list-style: none;
+        display: inline-block;
+        margin-left: 35px;
+    }
+    nav a {
+        text-decoration: none;
+    }
+    nav a:hover {
+        color: #4F9CF9;
+    }
+
+.button_bg {
+    background-color: #4F9CF9;
+    color: white;             
+    border: none;       
+    border-radius: 5px;
+    padding: 8px 20px;
+    cursor: pointer;          
+    transition: background-color 0.3s, transform 0.2s;
+}
+    .button_bg:hover {
+        background-color: #0056b3; 
+        transform: scale(1.05);   
+    }
+    .button_bg:active {
+        transform: scale(0.95);     
+    }
+.button_login {
+    background-color: #f1f1f1;
+    color: #043873;             
+    border: none;       
+    border-radius: 5px;
+    padding: 8px 20px;
+    cursor: pointer;          
+    transition: background-color 0.3s, transform 0.2s;
+}
+    .button_login:hover {
+        background-color: #0056b3;
+        color: #ffffff;
+        transform: scale(1.05);   
+    }
+    .button_login:active {
+        transform: scale(0.95);     
+    }
+
+
+/*  Inicio do CSS da Class Section  */   
+
+
+section {
+    height: 44vw; /* Altura das seções */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    align-content: center;
+}
+    button img{
+        width: 10px;
+        padding-left: 5px;
+    }
+    span img{
+        width: 10px;
+        padding-left: 5px;
+    }
+
+
+/*  Inicio do CSS da parte 1  */   
+
+
+.parte_01 {
+    background-image: url('../../public/main_background.png');
+}
+#texto_01{
+    display: block;
+    margin-right: 650px;
+    margin-top: -50px;
+    text-align: left;
+}
+    #texto_01 button{
+        margin-top: 20px;
+    }
+    #texto_01 h2{
+        font-size: 30px;
+        padding-bottom: 30px;
+        width: 400px;
+        text-align: left;
+    }
+#img_home{
+    width: 320px;
+    margin-left: -500px;
 }
 
-.container {
-    margin: 20px;
+/*  Inicio do CSS da parte 2  */   
+
+
+.parte_02 {
+    background-image: url('../../public/section_bg.png');
+}
+#texto_02{
+    display: block;
+    margin-left: 500px;
+    margin-top: -10px;
+}
+    #texto_02 button{
+        margin-top: 20px;
+    }
+    #texto_02 h2{
+        font-size: 28px;
+        padding-bottom: 30px;
+        width: 400px;
+        text-align: left;
+        color: #212529;
+    }
+    #texto_02 p {
+        width: 400px;
+        color: #212529;
+    }
+
+/*  Inicio do CSS da parte 3  */   
+
+
+.parte_03 {
+    background-image: url('../../public/section02_bg.png');
+    height: 300px;
+    background-size: cover;
+    background-position: right;
+}
+#texto_03{
+    display: block;
+    margin-left: 0;
+    margin-top: -40px;
+}
+    #texto_03 h2{
+        font-size: 28px;
+        padding-bottom: 20px;
+        
+    }
+    #texto_03 p {
+        width: 650px;
+    }
+
+/*  Inicio do CSS da parte 4  */   
+.parte_04{
+    display: grid;
+    height: 450px;
+    align-content: center;
+}
+    .parte_04 h2{
+        color: #212529;
+        font-size: 28px;
+        margin-bottom: 20px;
+        margin-top: -80px;
+    }
+
+/*  Inicio do CSS footer  */   
+
+
+footer {
+    background-color: #043873;
+    color: white;
+    padding: 50px;
+    text-align: center;
+    font-size: 12px;
 }
 
-table {
-    width: 100%;
-    border-collapse: collapse;
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
 }
 
-th,
-td {
-    padding: 10px;
-    border: 1px solid black;
+.footer-section {
+    flex: 1;
+    margin: 0 20px;
 }
+    .footer-section p {
+        margin-bottom: 10px;
+    }
+    .footer-section ul {
+        list-style: none;
+        padding: 0;
+    }
+    .footer-section ul li {
+        list-style: none;
+        padding-top: 5px;
+    }
+    .footer-section a {
+        color: #ffffff;
+        text-decoration: none;
+        font-size: 11px;
+    }
 
-button {
-    margin: 5px;
+.footer-bottom{
+    padding-top: 20px;
+    text-decoration: none;
 }
+    .footer-bottom a{
+        text-decoration: none;
+        font-size: 12px;
+        padding-left: 20px;
+    }
+
+/*  Fim do CSS  */   
