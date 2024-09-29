@@ -1,27 +1,62 @@
-# FrontEnd
+# Sistema de Ouvidoria
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.5.
+Este projeto é um sistema de ouvidoria desenvolvido com Flask para o backend e Angular para o frontend. O sistema permite o gerenciamento de manifestações, incluindo criação, edição, deleção e listagem.
 
-## Development server
+## Tecnologias Utilizadas
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+### Backend (Flask)
+- **Flask**: Micro framework para Python utilizado para construir a API.
+- **Flask-CORS**: Extensão para permitir solicitações CORS (Cross-Origin Resource Sharing).
+- **Flask-SQLAlchemy**: ORM (Object-Relational Mapping) para facilitar a interação com o banco de dados.
+- **PyMySQL**: Driver para conectar o Flask ao banco de dados MySQL.
 
-## Code scaffolding
+### Frontend (Angular)
+- **@angular/core**: Núcleo do framework Angular.
+- **@angular/common**: Conjunto de funcionalidades comuns do Angular.
+- **@angular/forms**: Módulo para criar e manipular formulários reativos.
+- **@angular/router**: Módulo para gerenciar rotas e navegação.
+- **bootstrap**: Biblioteca CSS para estilização e design responsivo.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Instalação
 
-## Build
+### Backend
+1. Clone o repositório:
+   ```bash
+   git clone <URL_DO_REPOSITORIO>
+   ```
+2. Navegue até a pasta do backend:
+   ```bash
+   cd backend
+   ```
+3. Instale as dependências:
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### Frontend
+1. Navegue até a pasta do frontend:
+   ```bash
+   cd frontend
+   ```
+2. Instale as dependências:
+   ```bash
+   npm install
+   ```
 
-## Running unit tests
+## Uso
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+1. Inicie o servidor backend:
+   ```bash
+   flask run
+   ```
 
-## Running end-to-end tests
+2. Inicie o servidor frontend:
+   ```bash
+   ng serve
+   ```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+3. Acesse o sistema através do navegador em `http://localhost:4200`.
 
-## Further help
+## Licença
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Este projeto está sob a licença MIT. Veja o arquivo `LICENSE` para mais detalhes.
